@@ -67,11 +67,11 @@ jobs:
             git pull origin main
             docker-compose build
             docker-compose up -d
-            docker exec -it php /bin/bash -c "chmod -R 777 storage"
-            docker exec -it php /bin/bash -c "cp .env.example .env"
-            docker exec -it php /bin/bash -c "composer install"
-            docker exec -it php /bin/bash -c "php artisan key:generate"
-            docker exec -it php /bin/bash -c "php artisan migrate"
+            docker exec -it php /bin/sh -c "chmod -R 777 storage"
+            docker exec -it php /bin/sh -c "cp .env.example .env"
+            docker exec -it php /bin/sh -c "composer install"
+            docker exec -it php /bin/sh -c "php artisan key:generate"
+            docker exec -it php /bin/sh -c "php artisan migrate"
 
 
             
