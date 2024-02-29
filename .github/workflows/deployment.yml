@@ -62,7 +62,7 @@ jobs:
           username: ${{ secrets.DROPLET_USER }}
           password: ${{ secrets.DROPLET_PASSWORD }}
           script: |
-            cd /byecar-web-server
+            cd byecar-web-server
             docker-compose down
             git pull origin main
             docker-compose build
