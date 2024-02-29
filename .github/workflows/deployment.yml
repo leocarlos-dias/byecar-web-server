@@ -50,7 +50,6 @@ jobs:
             git pull origin main
             docker-compose build
             docker-compose up -d
-            docker images
             docker exec -i php /bin/sh << EOF
             chmod -R 777 storage
             cp .env.example .env
