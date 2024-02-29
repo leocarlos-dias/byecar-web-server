@@ -45,14 +45,13 @@ jobs:
           username: ${{ secrets.DROPLET_USER }}
           password: ${{ secrets.DROPLET_PASSWORD }}
           script: |
-            # docker-compose down
-            # cd byecar-web-server
-            # git pull origin main
-            # docker-compose build
-            # docker-compose up -d
-            # docker images
+            docker-compose down
+            cd byecar-web-server
+            git pull origin main
+            docker-compose build
+            docker-compose up -d
+            docker images
             docker exec -i php /bin/sh << EOF
-            ls -la
             chmod -R 777 storage
             cp .env.example .env
             composer install
