@@ -51,7 +51,7 @@ jobs:
             docker-compose build
             docker-compose up -d
             docker exec -i php /bin/sh
-            "chmod -R 777 storage"
+            chmod -R 777 storage
             cp .env.example .env
             composer install
             php artisan key:generate
