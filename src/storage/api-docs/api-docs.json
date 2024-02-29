@@ -1,0 +1,102 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Veículos",
+        "description": "API para listar, atualizar e excluir veículos",
+        "contact": {
+            "name": "Leonardo Carlos",
+            "email": "leocsdias@hotmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/vehicles": {
+            "get": {
+                "tags": [
+                    "Vehicles"
+                ],
+                "summary": "List all vehicles",
+                "description": "Returns a list of all vehicles.",
+                "operationId": "listVehicles",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/api/vehicles/{id}": {
+            "delete": {
+                "tags": [
+                    "Vehicles"
+                ],
+                "summary": "Delete a vehicle",
+                "description": "Delete a vehicle by ID.",
+                "operationId": "deleteVehicle",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the vehicle to delete",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Vehicle deleted successfully"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Vehicles"
+                ],
+                "summary": "Update an existing vehicle",
+                "description": "Update an existing vehicle by ID.",
+                "operationId": "updateVehicle",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID of the vehicle to update",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Updated vehicle data",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "fipe_code": {
+                                        "type": "string"
+                                    },
+                                    "price": {
+                                        "type": "number",
+                                        "format": "float"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Vehicle updated successfully"
+                    }
+                }
+            }
+        }
+    }
+}
