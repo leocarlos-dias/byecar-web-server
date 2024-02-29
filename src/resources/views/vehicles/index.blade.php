@@ -117,7 +117,7 @@
         <circle cx="17" cy="17" r="2" />
       </svg>
       <span>Vehicles</span>
-      <!-- <h1 class="text-xs text-right text-[var(--theme-color-secondary)] -mt-1">Byecar</h1> -->
+      <h1 class="text-xs text-right text-[var(--theme-color-secondary)] -mt-1">Byecar</h1>
     </div>
     <table class="w-full">
       <thead>
