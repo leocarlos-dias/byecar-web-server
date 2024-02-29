@@ -6,23 +6,6 @@ on:
       - main
 
 jobs:
-  # run_tests:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
-
-  #     - name: Set up PHP
-  #       uses: shivammathur/setup-php@v2
-  #       with:
-  #         php-version: '7.4'
-
-  #     - name: Install dependencies
-  #       run: composer install
-
-  #     - name: Run tests
-  #       run: vendor/bin/phpunit
-
   build_and_push:
     runs-on: ubuntu-latest
     steps:
@@ -67,12 +50,10 @@ jobs:
             git pull origin main
             docker-compose build
             docker-compose up -d
-            docker exec -it php /bin/sh -c "chmod -R 777 storage"
-            docker exec -it php /bin/sh -c "cp .env.example .env"
-            docker exec -it php /bin/sh -c "composer install"
-            docker exec -it php /bin/sh -c "php artisan key:generate"
-            docker exec -it php /bin/sh -c "php artisan migrate"
-
-
-            
-
+            docker exec -it php /bin/sh
+            -c "chmod -R 777 storage"
+            cp .env.example .env
+            composer install
+            php artisan key:generate
+            php artisan migrate
+            exit
