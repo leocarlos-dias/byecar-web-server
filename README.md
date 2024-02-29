@@ -12,7 +12,7 @@
 
 ## 📖 Sobre
 
-Este projeto foi desenvolvido como parte de um desafio técnico e visa demonstrar habilidades em desenvolvimento web utilizando o framework Laravel, Docker para ambiente de desenvolvimento e produção, além de implementar um fluxo de deploy automatizado usando GitHub Actions para a plataforma Digital Ocean.
+Este projeto foi desenvolvido como parte de um desafio técnico e visa demonstrar habilidades em desenvolvimento web utilizando o framework Laravel, Docker para ambiente de desenvolvimento e produção, além de implementar um fluxo de deploy automatizado usando GitHub Actions para a plataforma Digital Ocean. O projeto está em produção para a avaliação do desafio, podendo ser acessado nessa [URL](http://144.126.222.30:8001/vehicles).
 
 ## 🚀 Tecnologias Utilizadas
 
