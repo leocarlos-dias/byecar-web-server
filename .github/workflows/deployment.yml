@@ -45,24 +45,18 @@ jobs:
           username: ${{ secrets.DROPLET_USER }}
           password: ${{ secrets.DROPLET_PASSWORD }}
           script: |
-            docker-compose down
-            cd byecar-web-server
-            git pull origin main
-            docker-compose build
-            docker-compose up -d
-            docker images
-            docker exec -i php /bin/sh
-            ls -la
-
-            # cd byecar-web-server
             # docker-compose down
+            # cd byecar-web-server
             # git pull origin main
             # docker-compose build
             # docker-compose up -d
-            # docker exec -i php /bin/sh
-            # chmod -R 777 storage
-            # cp .env.example .env
-            # composer install
-            # php artisan key:generate
-            # php artisan migrate
-            # exit
+            # docker images
+            docker exec -i php /bin/sh << EOF
+            ls -la
+            chmod -R 777 storage
+            cp .env.example .env
+            composer install
+            php artisan key:generate
+            php artisan migrate
+            exit
+            EOF
