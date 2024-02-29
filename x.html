@@ -1,0 +1,52 @@
+<style>
+	.selected {
+		position: relative;
+		transition: all .2s ease-in-out;
+		color: #fff;
+		cursor: help;
+	}
+
+	.selected:hover {
+		transform: scale(1.1);
+	}
+
+	.selected:hover span:first-child {
+		color: #ce0031;
+	}
+
+	.selected span:last-child {
+		width: max-content;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateY(-80%);
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, .25);
+		background-color: #ce0031;
+		color: #fff;
+		padding: 2px;
+		border-radius: 4px;
+		font-size: 10px;
+		font-weight: 500;
+		z-index: 1;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease-in-out;
+	}
+
+	.selected:hover span:last-child {
+		transform: translateY(-100%);
+		opacity: 1;
+		visibility: visible;
+	}
+</style>
+<div style="display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start">
+	<ul style="display:flex;gap:8px;list-style:none;font-weight:500;font-size:18px;color:rgba(255,255,255,25%)">
+		<li>D</li>
+		<li>S</li>
+		<li class="selected"><span>T</span><span>18h às 22h</span></li>
+		<li>Q</li>
+		<li>Q</li>
+		<li class="selected"><span>S</span><span>18h às 22h</span></li>
+		<li class="selected"><span>S</span><span>8h às 12h e 13h às 17h - MENSAL</span></li>
+	</ul><span style="font-size:xx-small;color:white;">Passe o mouse e veja os horários</span>
+</div>
