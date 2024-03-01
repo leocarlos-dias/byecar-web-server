@@ -48,14 +48,14 @@ Para executar o projeto localmente, siga os passos abaixo:
 4. Execute o comando `docker exec -it php /bin/sh` para acessar o container do PHP. Os passos subsequentes devem ser executados dentro do container.
 
 5. Execute o comando `chmod -R 777 storage` para conceder permissão de escrita à pasta de armazenamento.
-6. 
-7. Execute o comando `composer install` para instalar as dependências do projeto.
+  
+6. Execute o comando `composer install` para instalar as dependências do projeto.
 
-8. Execute o comando `cp .env.example .env` para criar o arquivo .env.
+7. Execute o comando `cp .env.example .env` para criar o arquivo .env.
 
-9. Execute o comando `php artisan key:generate` para gerar a chave da aplicação.
+8. Execute o comando `php artisan key:generate` para gerar a chave da aplicação.
 
-10. Execute o comando `php artisan migrate` para criar as tabelas no banco de dados.
+9. Execute o comando `php artisan migrate` para criar as tabelas no banco de dados.
 
 Pronto, o projeto estará disponível em `http://localhost:8001/vehicles`.
 
@@ -73,7 +73,7 @@ Para executar os testes, siga os passos abaixo:
 
 3. Dentro do container, execute o comando `php artisan test` para executar os testes.
 
-Este comando iniciará a execução dos testes automatizados para os casos de uso e controladores do projeto, utilizando o padrão de teste em memória para garantir a integridade e a eficiência dos testes.
+Este comando iniciará a execução dos testes automatizados para os casos de uso e controladores do projeto, utilizando o padrão de repositórios em memória para garantir a integridade e a eficiência dos testes.
 
 ## 📚 Documentação
 
